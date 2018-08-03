@@ -1,0 +1,65 @@
+body {
+/* background-image: url("../images/hd-backgrund-min.jpg"); */
+/* background-image: url("../images/2098541-stars-wallpaper-min.jpg"); */
+  padding: 50px;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+}
+.logout{
+  margin-left: 500px;
+}
+a {
+  color: #00B7FF;
+}
+.panel-body p{
+  margin-top: 30px;
+  line-height: 15px;
+  text-decoration: inherit;
+  word-spacing: 5px;
+    font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+    color: beige;
+}
+.panel-body {
+    padding: 15px;
+    background-color: #0F7173;
+}
+.panel-primary>.panel-heading {
+    color:black;
+/* background-color: #20c75194; */
+    border-color: #1e1e25;
+}
+.container .jumbotron, .container-fluid .jumbotron {
+  font-family: 'Hanalei Fill', cursive;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 6px;
+color: #00A6FB;
+}
+.navbar-inverse {
+    background-color: #082058;
+    border-color: #080808;
+}
+.jumbotron h1 {
+    opacity: 0.9;
+}
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #02010700;
+}
+footer{
+  background-color: green;
+  opacity: 0.4;
+}
+.panel-footer {
+    padding: 10px 15px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: black !important;
+}
+.panel-primary {
+    border-color: #337ab7;
+    height: 830px;
+}

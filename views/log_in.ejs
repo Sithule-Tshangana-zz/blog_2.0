@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>Sing up</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel='stylesheet' href='/stylesheets/footer.css'>
+  </head>
+  <body>
+        <div class="container">
+          <div class="row">
+            <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="/">South African Trendz</a>
+                </div>
+                <ul class="nav navbar-nav">
+                  <li><a href="/archive">Archives</a></li>
+                  <li><a href="/new">New Post</a></li>
+                  <li><a href="/contact">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+
+          </div>
+    <div class="container">
+      <% if (message) { %>
+<div class="alert alert-danger" role="alert">
+  <%= message %>
+</div>
+
+    <% } %>
+      <div class="row">
+  		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+              <div class="panel panel-success">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">
+                          <span class="glyphicon glyphicon-envelope"></span>Login
+                      </h3>
+                  </div>
+                  <div class="panel-body">
+                      <div class="media">
+                          <div class="media-body">
+                              <h4 class="media-heading text-success">Log in</h4>
+                              <form action="/sign_in" method="POST">
+                                  <div class="form-group">
+                                      <label for="newsletter-name" class="hidden">Name</label>
+                                      <input type="name" class="form-control" id="newsletter-name" name="username" placeholder="Name">
+                                  </div>
+                                  <!-- <div class="form-group">
+                                      <label for="newsletter-email" class="hidden">Email address</label>
+                                      <input type="email" class="form-control" id="newsletter-email" placeholder="Email">
+                                  </div> -->
+                                  <div class="form-group">
+                                      <label for="newsletter-email" class="hidden">Password</label>
+                                      <input type="password" class="form-control" id="newsletter-email" name="password" placeholder="Password">
+                                  </div>
+                                <button type="submit" class="btn btn-default btn-block btn-success">Submit</button>
+                              </form>
+                              <div class="">
+                                <p>If you have not signed up please sign up by clicking button bellow</p>
+                                <a href="/sign_up"><button type="button" name="button">sign up</button> </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer -->
+  	<section id="footer">
+  		<div class="container">
+  			<div class="row text-center text-xs-center text-sm-left text-md-left">
+  				<div class="col-xs-12 col-sm-4 col-md-4">
+  					<ul class="list-unstyled quick-links">
+              <li><a href="/"><i class="fa fa-angle-double-right"></i>South African Trendz</a></li>
+              <li><a href="/archives"><i class="fa fa-angle-double-right"></i>Archives</a></li>
+              <li><a href="/new"><i class="fa fa-angle-double-right"></i>New Post</a></li>
+              <li><a href="/contact"><i class="fa fa-angle-double-right"></i>Contact</a></li>
+  					</ul>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+  					<ul class="list-unstyled list-inline social text-center">
+  						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+  						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+  						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+  						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+  						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+  					</ul>
+  				</div>
+  			</div>
+  		</div>
+  	</section>
+  	<!-- ./Footer -->
+  </body>
+</html>

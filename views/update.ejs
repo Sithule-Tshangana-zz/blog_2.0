@@ -1,0 +1,115 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>New Post</title>
+          <link rel='stylesheet' href='/stylesheets/footer.css'>
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+
+    <div class="row">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">South African Trendz</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/archive">Archives</a></li>
+            <li><a href="/new">New Post</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+      <div class="container formContainer">
+          <form method="post">
+          <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+              <label for="exampleInputName">Title</label>
+              <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Enter title name..."
+                  name="title" value="<%= posts.title %>">=
+          </div>
+
+          <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+              <label for="exampleInputName">Author</label>
+              <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Name of author..."
+                  name="author" value="<%= posts.author %>">
+          </div>
+          <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+              <label for="exampleInputName">Author</label>
+              <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Image..."
+                  name="image" value="<%= posts.image %>">
+          </div>
+
+          <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+              <label for="exampleInputName">Content</label>
+              <textarea id="summernote" name="content">
+                  <%= posts.content %>
+              </textarea>
+              <!-- Footer -->
+              	<section id="footer">
+              		<div class="container">
+              			<div class="row text-center text-xs-center text-sm-left text-md-left">
+              				<div class="col-xs-12 col-sm-4 col-md-4">
+              					<ul class="list-unstyled quick-links">
+                          <li><a href="/"><i class="fa fa-angle-double-right"></i>South African Trendz</a></li>
+              						<li><a href="/archives"><i class="fa fa-angle-double-right"></i>Archives</a></li>
+              						<li><a href="/new"><i class="fa fa-angle-double-right"></i>New Post</a></li>
+              						<li><a href="/contact"><i class="fa fa-angle-double-right"></i>Contact</a></li>
+              					</ul>
+              				</div>
+              			</div>
+              			<div class="row">
+              				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+              					<ul class="list-unstyled list-inline social text-center">
+              						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+              						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+              						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+              						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+              						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+              					</ul>
+              				</div>
+              			</div>
+              		</div>
+              	</section>
+              	<!-- ./Footer -->
+              <script>
+                  $(document).ready(function () {
+                      $('#summernote').summernote({
+                          height: 150
+                      });
+                  });
+              </script>
+
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+              <button type="submit" class="btn btn-primary btn-block">Update post</button>
+          </div>
+
+      </form>
+      </div>
+
+      <script>
+          $(document).ready(function () {
+              $('#summernote').summernote({
+                  height: 200
+              });
+          });
+      </script>
+
+  </body>
+
+  </html>

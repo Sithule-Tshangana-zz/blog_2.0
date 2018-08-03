@@ -1,0 +1,87 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/views.css'/>
+        <link rel='stylesheet' href='/stylesheets/footer.css'>
+  </head>
+  <body>
+      <div class="row">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/">South African Trendz</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="/archive">Archives</a></li>
+              <li><a href="/new">New Post</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+        <div class="row">
+          <div class="jumbotron">
+            <h1>News Trendz</h1>
+            <button type="button" name="button"> <a href="/new">New Post</a> </button>
+          </div>
+        </div>
+
+        <div class="row">
+              <div class=" col-lg-12">
+                <div class="panel panel-primary">
+
+                  <div class="panel-heading">
+                  <center>     <h3 class="panel-title"><h3><%= posts.title %></h3></h3></center>
+                  </div>
+
+                  <div class="panel-body">
+                  <center>  <img src="<%=posts.image %>" alt=""width="100%" cla></center>
+                    <p> <%-posts.content %></p>
+
+                <a href="/delete/<%= posts.id %>"><button type="button" class="btn btn-primary">Delete</button></a>
+                  <a href="/update/<%= posts.id %>"><button type="button" class="btn btn-primary">Edit</button></a>
+
+                  </div>
+                  <div class="panel-footer">
+                    <p>Author: <%- posts.author %></p>
+                    <p>Date: <%= posts.date %></p>
+                  </div>
+                </div>
+              </div>
+
+              </div>
+              <!-- Footer -->
+              	<section id="footer">
+              		<div class="container">
+              			<div class="row text-center text-xs-center text-sm-left text-md-left">
+              				<div class="col-xs-12 col-sm-4 col-md-4">
+              					<ul class="list-unstyled quick-links">
+                          <li><a href="/"><i class="fa fa-angle-double-right"></i>South African Trendz</a></li>
+                          <li><a href="/archives"><i class="fa fa-angle-double-right"></i>Archives</a></li>
+                          <li><a href="/new"><i class="fa fa-angle-double-right"></i>New Post</a></li>
+                          <li><a href="/contact"><i class="fa fa-angle-double-right"></i>Contact</a></li>
+              					</ul>
+              				</div>
+              			</div>
+              			<div class="row">
+              				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+              					<ul class="list-unstyled list-inline social text-center">
+              						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+              						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+              						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+              						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+              						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+              					</ul>
+              				</div>
+              			</div>
+              		</div>
+              	</section>
+              	<!-- ./Footer -->
+            </body>
+            </html>
